@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A Legacy of Innovation · Compra tu iPhone</title>
+<style>
+:root{--bg:#fff;--soft:#f4f5f6;--ink:#353A3E;--muted:#6b7177;--line:#e3e5e7;--accent:#647C99;--accent-ink:#fff;--phone:#353A3E;--tint:#eceef0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16181a;--soft:#1e2124;--ink:#eceef0;--muted:#9aa1a8;--line:#2d3135;--tint:#23272b}}
+:root[data-theme="dark"]{--bg:#16181a;--soft:#1e2124;--ink:#eceef0;--muted:#9aa1a8;--line:#2d3135;--tint:#23272b}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;line-height:1.08;margin:0;letter-spacing:-.025em}
+h1{font-size:clamp(2.6rem,6.5vw,5rem);font-weight:700}
+h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:600}
+h3{font-size:1.2rem;font-weight:600;letter-spacing:-.01em}
+p{margin:0;color:var(--muted);max-width:60ch}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+section{padding:clamp(72px,11vw,150px) 0}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:980px;font:600 1rem/1 inherit;border:1.5px solid transparent;cursor:pointer;transition:background .25s,color .25s,transform .25s,box-shadow .25s}
+.btn-primary{background:var(--ink);color:var(--bg)}
+.btn-primary:hover{background:var(--accent);color:#fff;transform:translateY(-2px);box-shadow:0 10px 24px -10px var(--accent)}
+.btn-ghost{border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+
+/* nav */
+header{position:fixed;inset:0 0 auto;z-index:20;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.02em}
+.logo i{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:2px solid var(--ink);font:700 .72rem/1 inherit;font-style:normal}
+.links{display:flex;align-items:center;gap:30px;font-size:.95rem}
+.links a:not(.btn){color:var(--muted);transition:color .2s}
+.links a:not(.btn):hover{color:var(--ink)}
+.links .btn{padding:10px 20px;font-size:.92rem}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:var(--ink)}
+.burger span{display:block;width:22px;height:2px;background:currentColor;margin:5px auto;transition:transform .3s,opacity .3s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* hero */
+.hero{padding-top:calc(64px + clamp(48px,8vw,110px));background:radial-gradient(70% 60% at 75% 40%,var(--tint),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero p.lead{font-size:1.2rem;margin:24px 0 36px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.trust{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:40px;font-size:.92rem;color:var(--muted)}
+.trust span::before{content:"✓";color:var(--accent);font-weight:700;margin-right:8px}
+
+/* iPhone construido en CSS */
+.stage{display:grid;place-items:center;gap:26px}
+.phone{position:relative;width:min(250px,60vw);aspect-ratio:9/18.6;border-radius:15% / 7.5%;background:linear-gradient(145deg,color-mix(in srgb,var(--phone) 80%,#fff),var(--phone) 55%,color-mix(in srgb,var(--phone) 80%,#000));box-shadow:0 40px 70px -28px rgba(0,0,0,.45),inset 0 0 0 3px rgba(255,255,255,.22);transition:background .5s;animation:float 6s ease-in-out infinite}
+.phone::after{content:"";position:absolute;top:2.4%;left:50%;width:30%;height:2.4%;transform:translateX(-50%);border-radius:99px;background:#0b0c0d}
+.cam{position:absolute;top:5%;left:7%;width:42%;aspect-ratio:1;border-radius:26%;background:rgba(255,255,255,.14);backdrop-filter:blur(4px);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.3)}
+.cam b{position:absolute;width:38%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#4a5058,#0b0c0d 70%);box-shadow:0 0 0 2.5px rgba(255,255,255,.35)}
+.cam b:nth-child(1){top:8%;left:8%}.cam b:nth-child(2){bottom:8%;left:8%}.cam b:nth-child(3){top:30%;right:8%}
+@keyframes float{50%{transform:translateY(-12px)}}
+.swatches{display:flex;gap:14px}
+.sw{width:34px;height:34px;border-radius:50%;border:0;background:var(--c);cursor:pointer;box-shadow:inset 0 0 0 1px rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s}
+.sw:hover{transform:scale(1.15)}
+.sw[aria-pressed=true]{box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--ink)}
+#finish{font-size:.95rem;color:var(--muted);min-height:1.5em}
+#finish strong{color:var(--ink)}
+
+/* secciones */
+.head{max-width:680px;margin-bottom:clamp(40px,6vw,72px)}
+.head p{margin-top:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:20px}
+.card{background:var(--soft);border-radius:22px;padding:32px 28px;transition:transform .3s,box-shadow .3s,background .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 36px -22px rgba(0,0,0,.35)}
+.card svg{width:34px;height:34px;stroke:var(--accent);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:22px}
+.card p{margin-top:10px;font-size:.98rem}
+.models{background:var(--soft)}
+.models .card{background:var(--bg);display:flex;flex-direction:column}
+.price{font:600 1.5rem/1 -apple-system,"SF Pro Display",Arial,sans-serif;color:var(--ink);margin:18px 0 22px;letter-spacing:-.02em}
+.price small{display:block;font:400 .85rem/1.4 inherit;color:var(--muted);margin-bottom:6px;letter-spacing:0}
+.models .btn{margin-top:auto;align-self:flex-start;padding:11px 22px;font-size:.92rem}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:36px}
+.steps li{list-style:none;counter-increment:s;border-top:2px solid var(--ink);padding-top:20px}
+.steps li::before{content:counter(s);display:block;font:700 2rem/1 -apple-system,Arial,sans-serif;color:var(--accent);margin-bottom:14px}
+.steps{margin:0;padding:0}
+.steps p{margin-top:8px;font-size:.98rem}
+
+/* cta final */
+.final{background:var(--ink);color:var(--bg)}
+.final .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
+.final p{color:color-mix(in srgb,var(--bg) 70%,transparent);margin-top:18px}
+form{display:grid;gap:14px;background:var(--bg);color:var(--ink);padding:30px;border-radius:24px}
+label{font-size:.88rem;font-weight:600;display:grid;gap:6px}
+input,select{font:inherit;padding:13px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);transition:border-color .2s}
+input:hover,select:hover{border-color:var(--muted)}
+input:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 30%,transparent)}
+form .btn-primary{width:100%;margin-top:6px}
+#ok{display:none;text-align:center;padding:14px;border-radius:12px;background:var(--soft);font-weight:600}
+.wa{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-weight:600;font-size:1.05rem;color:var(--bg);border-bottom:1.5px solid currentColor;padding-bottom:2px;transition:opacity .2s,transform .2s}.wa:hover{opacity:.75;transform:translateX(3px)}footer a{color:var(--ink);font-weight:600;transition:color .2s}footer a:hover{color:var(--accent)}
+footer{padding:36px 0;font-size:.9rem;color:var(--muted);border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* una sola entrada orquestada */
+.hero .wrap>div:first-child>*{animation:in .8s cubic-bezier(.2,.7,.2,1) both}
+.hero .wrap>div:first-child>*:nth-child(2){animation-delay:.1s}.hero .wrap>div:first-child>*:nth-child(3){animation-delay:.2s}.hero .wrap>div:first-child>*:nth-child(4){animation-delay:.3s}
+@keyframes in{from{opacity:0;transform:translateY(22px)}}
+
+/* responsive */
+@media (max-width:900px){
+.hero .wrap,.final .wrap{grid-template-columns:1fr}
+.stage{order:-1}.hero{padding-top:calc(64px + 36px)}
+.phone{width:min(200px,50vw)}
+}
+@media (max-width:760px){
+.burger{display:block}
+.links{position:fixed;inset:calc(64px + env(safe-area-inset-top,0px)) 0 auto;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 20px 20px;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s}
+.links.open{opacity:1;transform:none;visibility:visible}
+.links a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line);font-size:1.05rem}
+.links .btn{margin-top:16px;padding:14px}
+.cta-row .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header>
+ <nav class="wrap" aria-label="Principal">
+  <a href="#inicio" class="logo"><i>iP</i> A Legacy of Innovation</a>
+  <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  <div class="links" id="menu">
+   <a href="#servicios">Servicios</a><a href="#modelos">Modelos</a><a href="#proceso">Cómo comprar</a>
+   <a href="#reservar" class="btn btn-primary">Reservar mi iPhone</a>
+  </div>
+ </nav>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+ <div class="wrap">
+  <div>
+   <h1>Tu próximo iPhone, con respaldo real.</h1>
+   <p class="lead">Vendemos iPhone nuevos y certificados con garantía, financiación flexible y entrega en tu ciudad. Elige el acabado, nosotros nos encargamos del resto.</p>
+   <div class="cta-row">
+    <a href="#reservar" class="btn btn-primary">Reservar mi iPhone</a>
+    <a href="#modelos" class="btn btn-ghost">Ver modelos</a>
+   </div>
+   <div class="trust"><span>Garantía incluida</span><span>Pago en cuotas</span><span>Envío asegurado</span></div>
+  </div>
+  <div class="stage">
+   <div class="phone" aria-hidden="true"><div class="cam"><b></b><b></b><b></b></div></div>
+   <div class="swatches" role="group" aria-label="Elige un acabado">
+    <button class="sw" style="--c:#353A3E" data-n="Space Gray" data-t="#e9ebec" aria-label="Space Gray" aria-pressed="true"></button>
+    <button class="sw" style="--c:#D7D8DA" data-n="Silver" data-t="#f1f2f3" aria-label="Silver" aria-pressed="false"></button>
+    <button class="sw" style="--c:#E3CBB0" data-n="Gold" data-t="#f6eee4" aria-label="Gold" aria-pressed="false"></button>
+    <button class="sw" style="--c:#4A3B5C" data-n="Deep Purple" data-t="#ece8f0" aria-label="Deep Purple" aria-pressed="false"></button>
+    <button class="sw" style="--c:#51574B" data-n="Midnight Green" data-t="#eaece8" aria-label="Midnight Green" aria-pressed="false"></button>
+    <button class="sw" style="--c:#647C99" data-n="Alpine Blue" data-t="#e7edf3" aria-label="Alpine Blue" aria-pressed="false"></button>
+   </div>
+   <div id="finish" aria-live="polite">Acabado: <strong>Space Gray</strong></div>
+  </div>
+ </div>
+</section>
+
+<section id="servicios">
+ <div class="wrap">
+  <div class="head"><h2>Comprar un iPhone debería ser sencillo.</h2><p>Cuidamos cada paso: desde elegir el modelo hasta que lo tienes configurado en la mano.</p></div>
+  <div class="grid">
+   <article class="card"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><h3>Equipos originales</h3><p>Nuevos, sellados y con factura. Cada equipo se verifica antes de salir.</p></article>
+   <article class="card"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h3"/></svg><h3>Financiación flexible</h3><p>Paga en cuotas con tarjeta o plan directo, sin letra pequeña.</p></article>
+   <article class="card"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg><h3>Entrega asegurada</h3><p>Envío con seguimiento a todo el país o recogida en tienda.</p></article>
+   <article class="card"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0116 0M4 12v3a2 2 0 002 2h1v-5H5M20 12v3a2 2 0 01-2 2h-1v-5h2"/><path d="M17 17v1a3 3 0 01-3 3h-2"/></svg><h3>Soporte posventa</h3><p>Configuración, traspaso de datos y ayuda cuando la necesites.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="models" id="modelos">
+ <div class="wrap">
+  <div class="head"><h2>Elige el iPhone que va contigo.</h2><p>Precios de referencia. Te confirmamos disponibilidad y valor final al reservar.</p></div>
+  <div class="grid">
+   <article class="card"><h3>iPhone Pro Max</h3><p>La mejor cámara y la pantalla más grande, con acabado en titanio.</p><div class="price"><small>Desde</small>Consultar precio</div><a href="#reservar" class="btn btn-ghost" data-model="iPhone Pro Max">Reservar</a></article>
+   <article class="card"><h3>iPhone Pro</h3><p>Potencia profesional en un tamaño cómodo para el día a día.</p><div class="price"><small>Desde</small>Consultar precio</div><a href="#reservar" class="btn btn-ghost" data-model="iPhone Pro">Reservar</a></article>
+   <article class="card"><h3>iPhone</h3><p>El equilibrio perfecto entre rendimiento, cámara y batería.</p><div class="price"><small>Desde</small>Consultar precio</div><a href="#reservar" class="btn btn-ghost" data-model="iPhone">Reservar</a></article>
+   <article class="card"><h3>iPhone certificado</h3><p>Equipos revisados con garantía, para ahorrar sin riesgos.</p><div class="price"><small>Desde</small>Consultar precio</div><a href="#reservar" class="btn btn-ghost" data-model="iPhone certificado">Reservar</a></article>
+  </div>
+ </div>
+</section>
+
+<section id="proceso">
+ <div class="wrap">
+  <div class="head"><h2>Cuatro pasos hasta tu iPhone.</h2></div>
+  <ol class="steps">
+   <li><h3>Elige tu modelo</h3><p>Dinos capacidad y acabado.</p></li>
+   <li><h3>Reserva</h3><p>Déjanos tus datos, sin pago inicial.</p></li>
+   <li><h3>Confirmamos</h3><p>Te escribimos con precio y plan de pago.</p></li>
+   <li><h3>Recíbelo</h3><p>Entrega o recogida, ya configurado.</p></li>
+  </ol>
+ </div>
+</section>
+
+<section class="final" id="reservar">
+ <div class="wrap">
+  <div><h2>Reserva tu iPhone hoy.</h2><p>Déjanos tus datos y te respondemos por WhatsApp con disponibilidad, precio y opciones de pago.</p><a class="wa" href="https://wa.me/573126333084" target="_blank" rel="noopener">Escríbenos al 312 633 3084</a></div>
+  <form id="f" novalidate>
+   <label>Nombre<input name="n" required autocomplete="name" placeholder="Tu nombre"></label>
+   <label>WhatsApp<input name="w" required type="tel" autocomplete="tel" placeholder="+57 300 000 0000"></label>
+   <label>Modelo de interés<select id="model"><option>iPhone Pro Max</option><option>iPhone Pro</option><option>iPhone</option><option>iPhone certificado</option></select></label>
+   <button class="btn btn-primary" type="submit">Reservar mi iPhone</button>
+   <div id="ok" role="status">Listo. Abrimos WhatsApp para que envíes tu reserva.</div>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 A Legacy of Innovation</span><a href="https://wa.me/573126333084" target="_blank" rel="noopener">WhatsApp 312 633 3084</a></div></footer>
+
+<script>
+(function(){
+var root=document.documentElement,sw=document.querySelectorAll('.sw'),fin=document.getElementById('finish');
+sw.forEach(function(b){b.addEventListener('click',function(){
+ sw.forEach(function(x){x.setAttribute('aria-pressed','false')});
+ b.setAttribute('aria-pressed','true');
+ root.style.setProperty('--phone',getComputedStyle(b).getPropertyValue('--c').trim());
+ fin.innerHTML='Acabado: <strong>'+b.dataset.n+'</strong>';
+})});
+var burger=document.querySelector('.burger'),menu=document.getElementById('menu');
+function close(){menu.classList.remove('open');burger.setAttribute('aria-expanded','false')}
+burger.addEventListener('click',function(){var o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+document.querySelectorAll('[data-model]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('model').value=a.dataset.model})});
+document.getElementById('f').addEventListener('submit',function(e){
+ e.preventDefault();var f=e.target,ok=true;
+ ['n','w'].forEach(function(k){var i=f.elements[k];var bad=!i.value.trim();i.style.borderColor=bad?'#c0392b':'';if(bad)ok=false});
+ if(ok){document.getElementById('ok').style.display='block';var m='Hola, soy '+f.elements.n.value.trim()+'. Quiero reservar un '+document.getElementById('model').value+'. Mi WhatsApp: '+f.elements.w.value.trim();window.open('https://wa.me/573126333084?text='+encodeURIComponent(m),'_blank','noopener')}
+});
+})();
+</script>
+</body>
+</html>
